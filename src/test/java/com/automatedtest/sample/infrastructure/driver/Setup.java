@@ -19,7 +19,12 @@ public class Setup {
         }
         switch (browser) {
             case "chrome":
+
                 ChromeOptions chromeOptions = new ChromeOptions();
+                //how to set driver path
+                //can set as jvm options: -Dwebdriver.chrome.driver=/path/to/other/driver/binary
+//                chromeOptions.setBinary("/path/to/other/binary");
+
                 chromeOptions.addArguments("['start-maximized']");
                 driver = new ChromeDriver(chromeOptions);
                 break;
